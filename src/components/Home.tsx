@@ -15,14 +15,14 @@ const FileUpload: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      // Faça a requisição para o backend, enviando o formData
+
       fetch('/api/upload', {
         method: 'POST',
         body: formData,
       })
         .then((response) => response.json())
         .then((data) => {
-          // Manipule a resposta do backend, se necessário
+          
           console.log(data);
         })
         .catch((error) => {
